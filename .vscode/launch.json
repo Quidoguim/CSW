@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-Microservico1Application<microservico1>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "br.pucrs.microdemo.microservico1.Microservico1Application",
+            "projectName": "microservico1",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-Microservico2Application<microservico2>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "br.pucrs.microdemo.microservico2.Microservico2Application",
+            "projectName": "microservico2",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

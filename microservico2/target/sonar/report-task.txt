@@ -1,0 +1,6 @@
+projectKey=Microservice2
+serverUrl=http://localhost:9000
+serverVersion=25.10.0.114319
+dashboardUrl=http://localhost:9000/dashboard?id=Microservice2
+ceTaskId=b3fcdde2-6019-49f4-9a11-83845d1325eb
+ceTaskUrl=http://localhost:9000/api/ce/task?id=b3fcdde2-6019-49f4-9a11-83845d1325eb

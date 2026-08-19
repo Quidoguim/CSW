@@ -1,0 +1,63 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "SpringMicroserviceDemo",
+    "dateExported": "2023-06-09T00:39:34.191Z",
+    "version": "1.1",
+    "folders": [
+        {
+            "_id": "6fd7e4f6-80f5-435f-87e1-f07bf6eee135",
+            "name": "User",
+            "containerId": "",
+            "created": "2023-06-08T21:48:40.719Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "20e7e1eb-0bba-4313-891a-6fe7607d4090",
+            "name": "Citations",
+            "containerId": "",
+            "created": "2023-06-08T22:24:45.576Z",
+            "sortNum": 20000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "cf0cfc49-e07a-4929-8895-eedf8f7b640d",
+            "colId": "0080295b-6403-4234-b203-69c86c264097",
+            "containerId": "6fd7e4f6-80f5-435f-87e1-f07bf6eee135",
+            "name": "get",
+            "url": "localhost:8080/user?fn=michael&ln=mora",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-06-08T21:48:50.079Z",
+            "modified": "2023-06-08T21:49:26.042Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "fn",
+                    "value": "michael",
+                    "isPath": false
+                },
+                {
+                    "name": "ln",
+                    "value": "mora",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "0343a1cf-f3ad-45a1-91aa-bde77f8f49c7",
+            "colId": "0080295b-6403-4234-b203-69c86c264097",
+            "containerId": "20e7e1eb-0bba-4313-891a-6fe7607d4090",
+            "name": "get",
+            "url": "localhost:8081/citation",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-06-08T22:24:55.195Z",
+            "modified": "2023-06-08T22:25:11.414Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

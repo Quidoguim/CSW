@@ -1,0 +1,6 @@
+FROM openjdk:17
+WORKDIR /app
+COPY ./target/microservico1-1.0.jar .
+COPY ./keystore.p12 .
+CMD ["java", "-jar", "microservico1-1.0.jar"]
+

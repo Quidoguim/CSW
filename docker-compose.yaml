@@ -1,0 +1,63 @@
+services:
+  banco:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: mysecretpassword
+      POSTGRES_DB: postgres  
+    ports:
+      - 5432:5432
+  doiscontainers-1:
+    depends_on:
+        banco:
+          condition: service_started
+    build:
+      context: ./microservico1
+      dockerfile: Dockerfile
+      tags: ["doiscontainers-1"]
+    ports:
+      - 443:443
+  doiscontainers-2:
+    depends_on:
+        banco:
+          condition: service_started
+    build:
+      context: ./microservico2
+      dockerfile: Dockerfile
+      tags: ["doiscontainers-2"]
+    ports:
+      - 444:443
+  estudante-service:
+    depends_on:
+        banco:
+          condition: service_started
+    build:
+      context: ./microservico-estudante
+      dockerfile: dockerfile
+      tags: ["estudante-service"]
+    ports:
+      - 8081:8080
+  disciplina-service:
+    depends_on:
+        banco:
+          condition: service_started
+    build:
+      context: ./microservico-disciplina
+      dockerfile: dockerfile
+      tags: ["disciplina-service"]
+    ports:
+      - 8082:8080
+  matricula-service:
+    depends_on:
+        banco:
+          condition: service_started
+        estudante-service:
+          condition: service_started
+        disciplina-service:
+          condition: service_started
+    build:
+      context: ./microservico-matricula
+      dockerfile: dockerfile
+      tags: ["matricula-service"]
+    ports:
+      - 8083:8080

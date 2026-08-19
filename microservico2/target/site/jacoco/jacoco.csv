@@ -1,0 +1,4 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+microservico2,br.pucrs.microdemo.microservico2.controller,CitationController,11,0,0,0,3,0,2,0,2,0
+microservico2,br.pucrs.microdemo.microservico2.business,CitationCollection,0,47,0,0,0,10,0,2,0,2
+microservico2,br.pucrs.microdemo.microservico2,Microservico2Application,8,0,0,0,3,0,2,0,2,0

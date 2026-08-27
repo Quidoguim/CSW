@@ -1,4 +1,4 @@
-# Trabalho 1 — Sistema de matrícula com microsserviços
+# Atividade — Sistema de matrícula com microsserviços
 
 Projeto de exemplo de microsserviços em Spring Boot. Enunciado em [enunciado.md](enunciado.md).
 

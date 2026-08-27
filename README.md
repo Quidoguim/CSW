@@ -4,25 +4,25 @@ Repositório dedicado à disciplina de Construção de Software (PUCRS - Escola 
 
 ## Estrutura
 
-Cada trabalho fica em uma pasta própria, com seu enunciado e sua implementação.
+Cada trabalho ou atividade fica em uma pasta própria, com seu enunciado e sua implementação.
 
 ```
-Trabalho1/
-├── enunciado.md               # enunciado do trabalho
+Atividade1/
+├── enunciado.md               # enunciado da atividade
 ├── docker-compose.yaml
 ├── commons/                   # projeto-base fornecido pelo professor
 ├── microservico1/              # projeto-base fornecido pelo professor
 ├── microservico2/              # projeto-base fornecido pelo professor
-├── microservico-estudante/     # implementado no trabalho
-├── microservico-disciplina/    # implementado no trabalho
-└── microservico-matricula/     # implementado no trabalho
+├── microservico-estudante/     # implementado na atividade
+├── microservico-disciplina/    # implementado na atividade
+└── microservico-matricula/     # implementado na atividade
 ```
 
-## Trabalhos
+## Atividades e trabalhos
 
-| Trabalho | Descrição | Status |
-|---|---|---|
-| [Trabalho1](Trabalho1/) | Sistema de matrícula (estudantes, disciplinas e matrícula) implementado como microsserviços em Spring Boot | Entregue |
+| Tipo | Nome | Descrição | Status |
+|---|---|---|---|
+| Atividade | [Microsserviços](Atividade1/) | Sistema de matrícula (estudantes, disciplinas e matrícula) implementado como microsserviços em Spring Boot | Entregue |
 
 ## Licença
 

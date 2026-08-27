@@ -1,24 +1,29 @@
-# spring-microservices-demo
+# CSW — Construção de Software
 
-Projeto de exemplo de microsserviços em Spring Boot, para a disciplina de Construção de Software (PUCRS).
+Repositório dedicado à disciplina de Construção de Software (PUCRS - Escola Politécnica). Contém os trabalhos e atividades desenvolvidos ao longo do curso.
 
-O projeto original do professor tem dois serviços de demonstração (`microservico1` e `microservico2`). A partir dele, foram adicionados três serviços novos para implementar um sistema simples de matrícula de estudantes:
+## Estrutura
 
-- `microservico-estudante`: cadastro de estudantes e consulta por número de matrícula ou por trecho do nome.
-- `microservico-disciplina`: cadastro de disciplinas, cada uma podendo ter vários horários (códigos de A a G).
-- `microservico-matricula`: matrícula de um estudante em uma disciplina e horário, validando os dados junto aos outros dois serviços.
-
-Cada serviço é uma aplicação Spring Boot independente, com seu próprio Dockerfile, rodando em container separado. Todos usam o mesmo banco Postgres.
-
-## Como rodar
+Cada trabalho fica em uma pasta própria, com seu enunciado e sua implementação.
 
 ```
-docker compose up --build
+Trabalho1/
+├── enunciado.md               # enunciado do trabalho
+├── docker-compose.yaml
+├── commons/                   # projeto-base fornecido pelo professor
+├── microservico1/              # projeto-base fornecido pelo professor
+├── microservico2/              # projeto-base fornecido pelo professor
+├── microservico-estudante/     # implementado no trabalho
+├── microservico-disciplina/    # implementado no trabalho
+└── microservico-matricula/     # implementado no trabalho
 ```
 
-Portas:
-- `microservico1`: 443
-- `microservico2`: 444
-- `microservico-estudante`: 8081
-- `microservico-disciplina`: 8082
-- `microservico-matricula`: 8083
+## Trabalhos
+
+| Trabalho | Descrição | Status |
+|---|---|---|
+| [Trabalho1](Trabalho1/) | Sistema de matrícula (estudantes, disciplinas e matrícula) implementado como microsserviços em Spring Boot | Entregue |
+
+## Licença
+
+Este repositório está sob a licença MIT — veja [LICENSE](LICENSE).

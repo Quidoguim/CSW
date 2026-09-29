@@ -23,6 +23,7 @@ Atividade1/
 | Tipo | Nome | Descrição | Status |
 |---|---|---|---|
 | Atividade | [Microsserviços](Atividade1/) | Sistema de matrícula (estudantes, disciplinas e matrícula) implementado como microsserviços em Spring Boot | Entregue |
+| Atividade | [Microsserviços com Gateway/Discovery/Config e observabilidade](Atividade2/) | Sistema de peças, clientes e representantes comerciais, com Spring Cloud Gateway, Eureka, Config Server e observabilidade via Prometheus + Grafana; testes e mutação na Atividade1 ainda pendentes | Em andamento |
 
 ## Licença
 

@@ -20,7 +20,7 @@
 		<!-- Propriedades do SonarQube -->
 		<sonar.organization>sua-organizacao</sonar.organization>
     	<sonar.host.url>http://localhost:9000</sonar.host.url>
-    	<sonar.token>sqp_8a7d1842670dc333a04a411f182a9de7432b9d42</sonar.token>
+    	<sonar.token>${env.SONAR_TOKEN}</sonar.token>
     	<sonar.projectKey>Microservice2</sonar.projectKey>
     	<sonar.projectName>Microservio Demo</sonar.projectName>
     	<!-- <sonar.sources>.</sonar.sources>

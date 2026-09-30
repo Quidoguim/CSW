@@ -50,6 +50,11 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -65,6 +70,40 @@
 						</exclude>
 					</excludes>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<configuration>
+					<!-- Mockito/Byte Buddy oficialmente so suportam ate o Java que o Spring Boot 3.1.0 conhecia
+					     na epoca do lancamento; isso permite rodar em JDKs mais novos que o ambiente local tenha. -->
+					<argLine>-Dnet.bytebuddy.experimental=true</argLine>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.pitest</groupId>
+				<artifactId>pitest-maven</artifactId>
+				<version>1.30.0</version>
+				<configuration>
+					<targetClasses>
+						<param>br.pucrs.microdemo.estudante.service.*</param>
+						<param>br.pucrs.microdemo.estudante.controller.*</param>
+					</targetClasses>
+					<targetTests>
+						<param>br.pucrs.microdemo.estudante.*</param>
+					</targetTests>
+					<outputFormats>
+						<outputFormat>HTML</outputFormat>
+					</outputFormats>
+					<timestampedReports>false</timestampedReports>
+				</configuration>
+				<dependencies>
+					<dependency>
+						<groupId>org.pitest</groupId>
+						<artifactId>pitest-junit5-plugin</artifactId>
+						<version>1.2.3</version>
+					</dependency>
+				</dependencies>
 			</plugin>
 		</plugins>
 	</build>

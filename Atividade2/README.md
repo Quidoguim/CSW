@@ -45,3 +45,13 @@ Portas publicadas no host:
 | Peças | `POST /pecas` | `GET /pecas/identificacao/{numeroIdentificacao}` | `GET /pecas?nome=` / `GET /pecas` |
 | Clientes | `POST /clientes` | `GET /clientes/cpf/{cpf}` | `GET /clientes?nome=` / `GET /clientes` |
 | Representantes | `POST /representantes` | `GET /representantes/cpf/{cpf}` | `GET /representantes?nome=` / `GET /representantes` |
+
+## Parte 2 — Testes e teste de mutação na Atividade1
+
+Feito diretamente nos módulos da [Atividade1](../Atividade1/) (estudante/disciplina/matrícula), não aqui: extraída uma camada de serviço em cada um (antes os controllers falavam direto com o repositório/cliente HTTP), com testes de serviço (Mockito puro), de controller (`@WebMvcTest` isolando o framework web) e de persistência (`@DataJpaTest` com H2 em memória, isolando do Postgres real). Teste de mutação com PIT (`org.pitest:pitest-maven`), 100% de mutantes mortos nos três módulos.
+
+Para rodar, dentro de cada `Atividade1/microservico-<estudante|disciplina|matricula>/`:
+```
+mvn test                                                  # testes
+mvn test-compile org.pitest:pitest-maven:mutationCoverage # relatorio em target/pit-reports/index.html
+```
